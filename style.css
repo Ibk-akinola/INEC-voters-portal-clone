@@ -1,0 +1,267 @@
+/*General styles*/
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb( 242, 245, 247);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb( 0, 123, 255);
+    transition: color 150ms linear;
+}
+
+a:hover {
+    color: rgb( 0, 86, 179);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.content {
+    width: 92%;
+    margin: 0 auto;
+    padding-block: 1rem 1.5rem;
+}
+
+p {
+    font-weight: 300;
+    padding-bottom: 1rem;
+    color: rgb( 52, 58, 64);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+/* header side */
+
+header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.logo img {
+    height: 55px;
+    width: 200px;
+}
+
+.navigation .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.navigation .hamburger-menu img {
+    width: 30px;
+    height: 25px;
+}
+
+.menu-items {
+    display: flex;
+    gap: 1.25rem;
+    transition: 300ms ease-in-out;
+}
+
+.menu_list a {
+    color: rgba( 0, 0, 0, 0.5);
+}
+
+.menu_list a:hover {
+    color: rgba( 0, 0, 0, 0.7);
+}
+
+@media (max-width: 950px) {
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -100%;
+        top: 4.5rem;
+        background-color: white;
+        width: 100%;
+    }
+    .menu-items.active {
+        left: 0;
+    }
+    .menu_list {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .menu_list:last-child {
+        margin-bottom: 1.25rem;
+    }
+    .navigation .hamburger-menu {
+        display: block;
+        height: 40px;
+        width: 56px;
+        background-color: white;
+        border: 1px solid rgba( 0, 0, 0, 0.1);
+        border-radius: 3px;
+        position: fixed;
+        top: 1rem;
+        right: 30px;
+    }
+}
+
+
+/* Alert side */
+
+.alert {
+    margin-top: 7rem;
+}
+
+.alert .container {
+    background-color: #e5effe;
+    border-radius: 3px;
+    color: rgb( 0, 123, 255);
+}
+
+.alert .content {
+    padding-bottom: 0;
+}
+
+.alert .container span {
+    float: right;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: rgb( 0, 123, 255);
+}
+
+.alert .container span:hover {
+    color: rgb( 0100, 123, 255);
+}
+
+.alert p {
+    padding-bottom: 1.75rem;
+    color: rgb( 0, 123, 255);
+}
+
+
+/* Section side */
+
+section {
+    margin-top: 4rem;
+}
+
+.box {
+    background-color: white;
+    margin-bottom: 2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.box .content {
+    padding: 2rem 0;
+}
+
+.box p {
+    margin-bottom: 0.8rem;
+}
+
+.box .btn {
+    background-color: rgb( 108, 117, 125);
+    color: white;
+    padding: 0.8em;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    transition: background-color 150ms linear;
+}
+
+.box .btn:hover {
+    background-color: #5a6268;
+    color: #fff;
+}
+
+@media (min-width: 950px) {
+    section .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: space-between;
+    }
+    .box {
+        margin-bottom: 1.5rem;
+        width: 32%;
+        height: fit-content;
+    }
+}
+
+
+/* Footer side */
+
+.foot {
+    margin-top: 3rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 4rem;
+    border-top: 1px solid rgba( 0, 0, 0, 0.1);
+    align-self: flex-end;
+}
+
+.foot .container {
+    font-size: 0.75rem;
+    font-weight: 100;
+    color: rgb( 108, 117, 125);
+    width: 90%;
+    margin-inline: auto;
+}
+
+.foot .page {
+    margin-top: 1.5rem;
+    float: left;
+}
+
+.foot .terms {
+    margin-top: 1.5rem;
+    float: right;
+}
